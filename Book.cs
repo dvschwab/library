@@ -18,8 +18,20 @@ public class LibraryBook : IBook
 		NumberOfPages = numberOfPages;
 	}
 
-	bool isAvailable();
+	bool isAvailable(Library library)
+	{
+		return false;
+	}
 
+	Library HeldBy()
+	{
+		return false;
+	}
+
+	Patron Borrower()
+	{
+		return false;
+	}
 
 
 }
