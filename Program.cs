@@ -7,7 +7,7 @@ namespace LibraryApp
         public string Name {get; set;}
         public Library(string name)
         {
-            return false;
+            Name = name;
         }
     }   
     class Program
