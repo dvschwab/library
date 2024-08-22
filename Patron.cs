@@ -3,12 +3,14 @@ namespace LibraryApp
      
     public class Patron
     {
-        unsigned long CardNumber {get;set;}
-        string PatronName {get; set};
-        Library HomeLibrary {get; set;}
-        Patron(unsigned long cardNumber, string name, Library homeLibrary)
+        public long CardNumber {get;set;}
+        public string PatronName {get; set;}
+        public Library HomeLibrary {get; set;}
+        public Patron( long cardNumber, string name, Library homeLibrary)
         {
-        return false;
+            CardNumber = cardNumber;
+            PatronName = name;
+            HomeLibrary = homeLibrary;
         }
         
     }

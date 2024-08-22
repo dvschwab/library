@@ -1,0 +1,5 @@
+/home/david/repos/library/obj/Debug/net8.0/library.GeneratedMSBuildEditorConfig.editorconfig
+/home/david/repos/library/obj/Debug/net8.0/library.AssemblyInfoInputs.cache
+/home/david/repos/library/obj/Debug/net8.0/library.AssemblyInfo.cs
+/home/david/repos/library/obj/Debug/net8.0/library.csproj.CoreCompileInputs.cache
+/home/david/repos/library/obj/Debug/net8.0/library.sourcelink.json
