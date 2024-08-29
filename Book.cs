@@ -2,40 +2,32 @@ namespace LibraryApp
 {
 	public interface IBook
 	{
-		public long Book(long ID, string title, int numberOfPages, Library library);
 		public bool isAvailable(Library library);
-		public Library HeldBy();
-		public Patron Borrower();
 	}
 
-	public class LibraryBook : IBook
+	public class Book : IBook
 	{
 		public long BookID { get; set; }
 		public string Title { get; set; }
 		public int NumberOfPages { get; set;}
-		public LibraryBook(long id, string title, int numberOfPages, Library library)
+
+		public Book(long id, string title, int numberOfPages)
 		{
 			BookID = id;
 			Title = title;
 			NumberOfPages = numberOfPages;
-			Library = library;
 		}
 
 		public bool isAvailable(Library library)
 		{
-			return false;
+			if (library.HasBook(Title))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
-
-		public Library HeldBy()
-		{
-			return false;
-		}
-
-		public Patron Borrower()
-		{
-			return false;
-		}
-
-
 	}
 }

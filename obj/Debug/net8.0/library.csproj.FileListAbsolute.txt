@@ -3,3 +3,13 @@
 /home/david/repos/library/obj/Debug/net8.0/library.AssemblyInfo.cs
 /home/david/repos/library/obj/Debug/net8.0/library.csproj.CoreCompileInputs.cache
 /home/david/repos/library/obj/Debug/net8.0/library.sourcelink.json
+/home/david/repos/library/bin/Debug/net8.0/library
+/home/david/repos/library/bin/Debug/net8.0/library.deps.json
+/home/david/repos/library/bin/Debug/net8.0/library.runtimeconfig.json
+/home/david/repos/library/bin/Debug/net8.0/library.dll
+/home/david/repos/library/bin/Debug/net8.0/library.pdb
+/home/david/repos/library/obj/Debug/net8.0/library.dll
+/home/david/repos/library/obj/Debug/net8.0/refint/library.dll
+/home/david/repos/library/obj/Debug/net8.0/library.pdb
+/home/david/repos/library/obj/Debug/net8.0/library.genruntimeconfig.cache
+/home/david/repos/library/obj/Debug/net8.0/ref/library.dll
