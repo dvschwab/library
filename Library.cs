@@ -5,8 +5,14 @@ using System.Collections.Generic;
 namespace LibraryApp
 {
 
+    public interface ILibrary
+    {
+         public bool HasBook(string bookTitle);
+         public void ListCatalogue();
+         public string LendBook(Patron borrower, Book book);
+    }
 
-    public class Library
+    public class Library : ILibrary
     {
         public string LibraryName {get; set;}
         public List<Book> Catalogue {get; set;}
@@ -47,7 +53,7 @@ namespace LibraryApp
         {
             foreach (Book book in this.Catalogue)
             {
-                Console.WriteLine(book.BookTitle);
+                Console.WriteLine("\t" + book.BookTitle);
             }
         }
 
@@ -55,6 +61,9 @@ namespace LibraryApp
         {
             this.Catalogue.Remove(book);
             borrower.Borrowed.Add(book);
+
+            DateTime BorrowedOn = DateTime.Today;
+            book.DueDate = BorrowedOn.AddDays(21);
             return(book.BookTitle);
         }
                 

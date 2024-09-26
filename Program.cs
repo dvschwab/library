@@ -24,21 +24,10 @@ namespace LibraryApp
 
             Library HomeLibrary = new Library("Burbank Rd.", theBooks);
             Console.WriteLine("Welcome to the {0} Library.", HomeLibrary.LibraryName);
+            Console.WriteLine("Here are the books available for checkout:");
             HomeLibrary.ListCatalogue();
 
-            //Console.WriteLine("Type in the name of a book to see if the library has it:");
-            //string bookToCheck = Console.ReadLine() ?? "";
-
-            // Let user check if the library has a book.
-
-            // if(HomeLibrary.HasBook(bookToCheck))
-            // {
-            //     Console.WriteLine("The book {0} is at the library", bookToCheck);
-            // }
-            // else
-            // {
-            //     Console.WriteLine("The book {0} is not at the library", bookToCheck);
-            // }
+            // Make a Patron and have them borrow a book.
 
             Patron newPatron = new Patron(12345, "Book Lover", HomeLibrary);
 
@@ -49,6 +38,13 @@ namespace LibraryApp
             Console.WriteLine("The patron has now borrowed {0}", witchBook.BookTitle);
             Console.WriteLine("The library catalogue does not have this book any more");
             HomeLibrary.ListCatalogue();
+
+            // Verify that the book is lended
+            Console.WriteLine("Is the book {0} now lended?", witchBook.BookTitle);
+            Console.WriteLine(witchBook.CheckIfLended(HomeLibrary).ToString());
+
+            // Show the due date
+            Console.WriteLine("The due date is {0:D}", witchBook.DueDate);
         }
     }
 }
