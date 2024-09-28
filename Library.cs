@@ -17,6 +17,7 @@ namespace LibraryApp
     {
         public string LibraryName {get; set;}
         public List<Book> Catalogue {get; set;}
+        public Dictionary<string, string> LibraryHours {get; set;}
 
         // Make a new library
         // Give it an empty catalogue if necessary
@@ -33,6 +34,8 @@ namespace LibraryApp
             {
                 this.Catalogue = new List<Book>();
             }
+
+            LibraryHours = new Dictionary<string, string>();
         }
 
         public bool HasBook(string bookTitle)

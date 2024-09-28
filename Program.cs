@@ -45,6 +45,28 @@ namespace LibraryApp
 
             // Show the due date
             Console.WriteLine("The due date is {0:D}", witchBook.DueDate);
+
+            // Library hours as a dictionary
+
+            Dictionary<string, string> LibraryHours = new Dictionary<string, string>();
+            LibraryHours.Add("Monday", "10 - 8");
+            LibraryHours.Add("Tuesday", "10 - 8");
+            LibraryHours.Add("Wednesday", "10 - 6");
+            LibraryHours.Add("Thursday", "10 - 6");
+            LibraryHours.Add("Friday", "10 - 6");
+            LibraryHours.Add("Saturday", "12 - 5");
+            LibraryHours.Add("Sunday", "Closed");
+
+            HomeLibrary.LibraryHours = LibraryHours;
+
+            foreach(KeyValuePair<string, string> kvp in HomeLibrary.LibraryHours)
+            {
+                Console.WriteLine($"{kvp.Key,-5}: {kvp.Value, 20}");
+            }
+
+            // Test ToString() method of book
+
+            Console.WriteLine(witchBook.ToString());
         }
     }
 }
