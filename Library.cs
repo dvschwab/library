@@ -10,6 +10,7 @@ namespace LibraryApp
          public bool HasBook(string bookTitle);
          public void ListCatalogue();
          public string LendBook(Patron borrower, Book book);
+         public string ReturnBook(Patron borrower, Book book);
     }
 
     public class Library : ILibrary
@@ -65,6 +66,15 @@ namespace LibraryApp
             DateTime BorrowedOn = DateTime.Today;
             book.DueDate = BorrowedOn.AddDays(21);
             return(book.BookTitle);
+        }
+
+        public string ReturnBook(Patron borrower, Book book)
+        {
+            borrower.Borrowed.Remove(book);
+            this.Catalogue.Add(book);
+            book.DueDate = DateTime.Today;
+            return(book.BookTitle);
+            
         }
                 
     }

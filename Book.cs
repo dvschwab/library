@@ -40,7 +40,7 @@ namespace LibraryApp
 
 		public override string ToString()
 		{
-			return String.Empty;
+			return BookTitle + "," + NumberOfPages.ToString() + "," + IsLended.ToString()+ "," + DueDate.ToString();
 		}
 	}
 }
